@@ -1,6 +1,7 @@
 # PowerShell Scripts by Patrick Goodwin
 
 ## Table of Contents
+- [Clear Git](#clear-git)
 - [Compare Diff](#compare-diff)
 - [Connect Four](#connect-four)
 - [Count Files](#count-files)
@@ -12,12 +13,30 @@
 - [Random Password](#random-password)
 - [Regvim](#regvim)
 - [Search Match](#search-match)
+- [Unit Tests](Unit-Tests)
 - [Update Git](#update-git)
 - [Time](#time)
 - [Vs](#vs)
 - [Vsc](#vsc)
     
 
+# Clear Git
+**Author(s):** Patrick Goodwin
+
+This script deletes all local branches that are not currently published. I like to use this branch because there is a Visual Studio bug that sometimes causes many past branches to locally respawn upon rebooting the app, causing unwanted clutter.
+
+**NOTE:** You should not use this command if you don't regularly push your changes. I almost always push my commits immediately after creating them, so this is practical for me, but if you have unpublished branches with many commits, don't use this command until you publish them (or else you will lose your branch). Also, this command will not delete any branches you are currently checked out on.
+
+### Dependencies
+- **Git**: Must be in your PATH as an environment variable
+
+### Parameters
+- None.
+
+### Example Usage
+```
+Clear-Git
+```
 ## Compare Diff
 Compares two files line by line and highlights the differences. It can also ignore timestamps if specified.
 
@@ -158,6 +177,19 @@ Outputs the time of any operation.
 ### Example Usage
 ```
 time -f { Write-Output "Hello World" }
+```
+## Unit-Tests
+Runs all of the unit tests in the specified folder with `.csproj`.
+
+### Dependencies
+- You must be in the base folder for the unit test project.
+
+### Parameters
+- None. (for now)
+
+### Example Usage
+```
+Unit-Tests
 ```
 ## Update Git
 Fetches the latest changes from the remote repository and merges them into the current branch. Can specify a branch to merge from.
