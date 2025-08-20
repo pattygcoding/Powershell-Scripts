@@ -1,4 +1,5 @@
 # PowerShell Scripts by Patrick Goodwin
+[![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)](https://docs.microsoft.com/en-us/powershell/)
 
 ## Table of Contents
 - [Angular Start](#angular-start)
