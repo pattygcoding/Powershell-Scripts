@@ -9,6 +9,7 @@
 - [Compress Git](#compress-git)
 - [Connect Four](#connect-four)
 - [Count Files](#count-files)
+- [Create File](#create-file)
 - [Dotnet Analysis](#dotnet-analysis)
 - [Gensql Col](#gensql-col)
 - [Gensql Count](#gensql-count)
@@ -135,6 +136,19 @@ Counts and groups files by their extensions in the current directory and its sub
 ```
 count-files -includenode
 ```
+
+## Create File
+Creates a new file with the specified name. Automatically adds .txt extension if no file extension is provided.
+
+### Parameters
+- `-Name`: Name of the file to create (mandatory)
+
+### Example Usage
+```
+create-file "myfile"
+create-file "document.txt"
+```
+
 ## Dotnet Analysis
 Analyzes dotnet backend output on the terminal and sorts outputs to find specific calls to APIs and methods.
 
